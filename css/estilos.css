@@ -36,8 +36,6 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
-
   grid-template-areas:
     "testimonial-1 testimonial-1 testimonial-2 testimonial-3"
     "testimonial-4 testimonial-5 testimonial-5 testimonial-3";
@@ -51,16 +49,19 @@ body {
   background-color: var(--Moderate-violet);
   color: var(--White);
   position: relative;
+  width:100%;
 }
 .testimonial-1--bgi {
   position: absolute;
   top: 5px;
-  right: 40px;
-  background-image: url(../img/bg-pattern-quotation.svg);
+  right: 45px;
+  background-color: var(--moderate-violet);
+    background-image: url(../img/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 130px;
-  height: 90px;
+  background-position: top right 1.5rem;
+background-size: 100px;
+width:300px;
+  height: 90px; 
 }
 .testimonial-1 .testimonial__header {
   position: relative;
@@ -149,7 +150,7 @@ body {
   .testimonial-1--bgi {
     top: 5px;
     right: 30px;
-    width: 100px;
+    width: 200px;
     height: 40px;
   }
 }
@@ -180,6 +181,13 @@ body {
   .testimonial-5 {
     min-height: 350px;
   }
+   .testimonial-1--bgi {
+    background-size:100px;
+    top: 5px;
+    right: 20px;
+    width:200px;
+     background-position: top right 0.9rem; 
+  }
 }
 @media screen and (max-width: 280px) {
   [class^="testimonial-"] {
@@ -191,5 +199,6 @@ body {
     right: 0;
     width: 20px;
     height: 10px;
+     background-position: top right 0.9rem; 
   }
 }
